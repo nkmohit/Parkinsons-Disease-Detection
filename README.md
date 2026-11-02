@@ -1,7 +1,12 @@
+> **Early prototype (2024-25) on a self-built 81-recording dataset. Not the code or results of the manuscript.**
+
 # Parkinson's Disease Detection from Voice Data
 
 ## Overview
 This project involves detecting Parkinson's disease using voice recordings. By extracting key voice features from audio data, machine learning models were trained to predict the likelihood of Parkinson's disease. The final solution includes a user-friendly **Streamlit web application** for real-time analysis.
+
+## SMOTE leakage
+In `Model_selection_for_Parkinson's_Disease_Detection(with created_dataset).ipynb`, SMOTE is fit on the full feature matrix **before** the train/test split. Synthetic samples can therefore appear in both the training and test sets. This is a known leakage issue, so the metrics reported in that notebook are optimistic. The notebook was not re-run for this note; the 81 source recordings are not committed in this repository.
 
 ---
 
